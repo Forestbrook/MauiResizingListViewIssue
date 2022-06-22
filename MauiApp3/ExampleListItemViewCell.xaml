@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ViewCell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+          xmlns:vm="clr-namespace:MauiApp3;assembly=MauiApp3"
+          x:DataType="vm:ExampleListItemViewModel"
+          x:Class="MauiApp3.ExampleListItemViewCell"
+          >
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Button Grid.Row="0" Text="{Binding Label1}" Clicked="OnOpenClose" CornerRadius="0"  HeightRequest="40" TextColor="Black" BackgroundColor="Cyan" HorizontalOptions="Fill"/>
+
+        <ContentView Grid.Row="1" HeightRequest="40" Padding="10" BackgroundColor="LightGreen" HorizontalOptions="Fill" IsVisible="{Binding IsOpen}">
+            <Label Text="{Binding Label2}" HorizontalOptions="Center" VerticalOptions="Center" />
+        </ContentView>
+
+    </Grid>
+</ViewCell>
